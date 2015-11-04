@@ -1,4 +1,8 @@
-SimpleGulp is the simplest possible starting point for prototyping front end features where you intend to write your own Sass and JavaScript from scratch. The npm dev dependencies are the build tools required to compile sass and auto-update your changes in the browser. They are: gulp, gulp-sass and browser-sync for serving the project.
+SimpleGulp is the simplest possible starting point for prototyping front end features where you intend to write your own Sass and JavaScript from scratch. The npm dev dependencies are the build tools required to compile sass and auto-update your changes in the browser. They are:
+
+* gulp
+* gulp-sass
+* browser-sync
 
 # Getting setup
 
