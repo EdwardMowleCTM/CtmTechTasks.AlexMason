@@ -1,4 +1,8 @@
-SimpleGulp is the simplest possible starting point for prototyping front end features where you intend to write your own styles (with sass) and JavaScript from scratch. The only dependencies that this project uses are the build tools (gulp) required to compile sass (gulp-sass) and auto-update your changes in the browser (browser-sync).
+SimpleGulp is the simplest possible starting point for prototyping front end features where you intend to write your own Sass and JavaScript from scratch. The npm dev dependencies are the build tools required to compile sass and auto-update your changes in the browser.
+
+* gulp
+* gulp-sass
+* browser-sync
 
 # Getting setup
 
@@ -20,13 +24,13 @@ Install all required dev tools and dependencies with the node package manager.
 $ npm install
 ```
 
-If all you want to do is compile the scss files then you can use the gulp 'sass' task.
+If all you want to do is compile the Sass files then you can use the gulp 'sass' task.
 
 ```
 $ gulp sass
 ```
 
-If you intend to make changes and want to see the affects in your browser immediate, then you can serve the project with browser-sync and watch sass compile and update in the browser automatically.
+If you intend to make changes and want to see the affects in your browser immediately then you can serve the project with browser-sync and watch as your sass compiles and update automatically.
 
 ```
 $ gulp serve
