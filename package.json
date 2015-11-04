@@ -1,0 +1,12 @@
+{
+  "name": "simplegulp",
+  "version": "1.0.0",
+  "description": "The simplest possible starting point for prototyping.",
+  "author": "SevenInitiative",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.0"
+  }
+}
