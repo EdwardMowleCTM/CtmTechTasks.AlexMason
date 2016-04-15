@@ -1,37 +1,41 @@
-SimpleGulp is the simplest possible starting point for prototyping front end features where you intend to write your own Sass and JavaScript from scratch. The npm dev dependencies are the build tools required to compile sass and auto-update your changes in the browser. They are:
+# Getting started
 
-* gulp
-* gulp-sass
-* browser-sync
+Before getting this project and the build tools that come with it working on your machine you will need to install [Git](http://git-scm.com) and [NodeJS](http://nodejs.org). Once these are installed, you can open the "Git Bash" command line interface and follow the instructions below:
 
-# Getting setup
-
-Clone this repository into a directory on your machine.
+Use the "cd" command to "change directory" to where you want the project to be saved (eg: your Desktop).
 
 ```
-$ git clone https://github.com/SevenInitiative/SimpleGulp.git
+$ cd Desktop/
 ```
 
-Navigate into the new directory.
+Use the git clone command to copy the repository from GitHub into the choosen directory on your machine.
 
 ```
-$ cd SimpleGulp
+$ git clone https://github.com/EdwardMowleCTM/CtmTechTasks.AlexMason.git
 ```
 
-Install all required dev tools and dependencies with the node package manager.
+This will create a new folder with the project files inside. Navigate into the new directory (with the "cd" command again).
+
+```
+$ cd CtmTechTasks.AlexMason
+```
+
+Install all of required build tools and dependencies using the node package manager.
 
 ```
 $ npm install
 ```
 
-If all you want to do is compile the Sass files then you can use the gulp 'sass' task.
+The packages that this command will install are defined in the package.json. For this project I've included:
 
-```
-$ gulp sass
-```
+* gulp (a build tool).
+* gulp-sass (for compiling SASS to CSS).
+* browser-sync (for running a local server and auto-refreshing your CSS).
 
-If you intend to make changes and want to see the affects in your browser immediately then you can serve the project with browser-sync and watch as your sass compiles and update automatically.
+I've configured Gulp for you (to get you started) by defining a "serve" task in gulpfile.js.
 
 ```
 $ gulp serve
 ```
+
+Running the "gulp serve" command will create a local server (using browser-sync) which serves the project.
