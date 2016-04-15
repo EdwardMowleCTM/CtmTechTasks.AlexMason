@@ -1,0 +1,237 @@
+html, body {
+  background-color: #0047b3;
+}
+
+/*CTM logo*/
+.ctm-logo {
+  position: absolute;
+  left: 30%;
+  top: 100px;
+}
+
+/*All navigation buttons*/
+#nav-buttons {
+    position: absolute;
+    left: 30%;
+    top: 150px;
+    width: 1500px;
+}
+
+/*To display nav buttons in a line*/
+.button {
+  display: inline-block;
+}
+
+/*Blue nav buttons*/
+#maintab {
+  position: relative;
+  bottom: 3px;
+  height: 50px;
+  width: 150px;
+  border: 0px;
+  border-radius: 10px;
+  margin-right: 5px;
+  color: white;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 15px;
+  background: linear-gradient(#000099,#000033);
+}
+
+#maintab img {
+  padding-right: 8px;
+  padding-bottom: 2px;
+  vertical-align: middle;
+}
+
+/*Home button*/
+#hometab {
+  position: relative;
+  top: 10px;
+  height:50px;
+  width: 50px;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+}
+
+#hometab img {
+  padding-top: 7px;
+}
+
+/*Accordion div position*/
+#accordion {
+  position: absolute;
+  top: 250px;
+  left: 30%;
+  width: 1000px;
+}
+
+/*Accordion body controls*/
+#accordion #accordionContent {
+  position: relative;
+  bottom: 5px;
+  height: 200px;
+  width: 1020px;
+  border: 0px;
+  border-radius: 0px 0px 10px 10px;;
+  padding: 0px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: white;
+  z-index: 3;
+}
+
+#accordion #information {
+  position: relative;
+  left: 200px;
+  bottom: 95px;
+  width: 450px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin: 0px;
+  border-right: 1px solid grey;
+  z-index: 1;
+}
+
+/*(Messy with the repeated code here)*/
+#accordion #cashback1 {
+  position: relative;
+  left: 700px;
+  bottom: 140px;
+  width: 100px;
+  margin: 0px;
+  font-size: 25px;
+  font-family: "Arial", Helvetica, sans-serif;
+  z-index: 1;
+}
+
+#accordion #cashback2 {
+  position: relative;
+  left: 700px;
+  bottom: 200px;
+  width: 100px;
+  margin: 0px;
+  font-size: 25px;
+  font-family: "Arial", Helvetica, sans-serif;
+  z-index: 1;
+}
+
+#accordion #cashback3 {
+  position: relative;
+  left: 700px;
+  bottom: 140px;
+  width: 100px;
+  margin: 0px;
+  font-size: 25px;
+  font-family: "Arial", Helvetica, sans-serif;
+  z-index: 1;
+}
+
+#accordion #cashback4 {
+  position: relative;
+  left: 700px;
+  bottom: 160px;
+  width: 100px;
+  margin: 0px;
+  font-size: 25px;
+  font-family: "Arial", Helvetica, sans-serif;
+  z-index: 1;
+}
+
+#accordion #cashbackValue1 {
+  position: relative;
+  left: 700px;
+  bottom: 150px;
+  width: 100px;
+  margin: 0px;
+  margin-top: 5px;
+  font-size: 30px;
+  font-family: "Arial", Helvetica, sans-serif;
+  z-index: 1;
+}
+
+#accordion #cashbackValue2 {
+  position: relative;
+  left: 700px;
+  bottom: 210px;
+  width: 100px;
+  margin: 0px;
+  margin-top: 5px;
+  font-size: 30px;
+  font-family: "Arial", Helvetica, sans-serif;
+  z-index: 1;
+}
+
+#accordion #cashbackValue3 {
+  position: relative;
+  left: 700px;
+  bottom: 150px;
+  width: 100px;
+  margin: 0px;
+  margin-top: 5px;
+  font-size: 30px;
+  font-family: "Arial", Helvetica, sans-serif;
+  z-index: 1;
+}
+
+#accordion #cashbackValue4 {
+  position: relative;
+  left: 700px;
+  bottom: 170px;
+  width: 100px;
+  margin: 0px;
+  margin-top: 5px;
+  font-size: 30px;
+  font-family: "Arial", Helvetica, sans-serif;
+  z-index: 1;
+}
+
+#accordion img {
+  position: relative;
+  left: 20px;
+  top: 40px;
+  padding-right: 30px;
+  padding-left: 5px;
+  z-index: 2;
+}
+
+/*Accordion header controls*/
+#accordion h3 {
+  width: 960px;
+  height: 50px;
+  border: 0px;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 20px;
+  font-family: "Arial", Helvetica, sans-serif;
+  font-size: 24px;
+  color: white;
+  background: linear-gradient(#000099,#000033);
+  z-index: 3;
+}
+
+#header1 #apr, #header2 #apr, #header3 #apr, #header4 #apr {
+  position: relative;
+  left: 830px;
+  bottom: 30px;
+  width: 130px;
+  margin: 0px;
+}
+
+/*Icon when accordion body in default position*/
+.defaultIcon {
+    background-image: url(/img/green-arrow-right.png) !important;
+    width: 25px;
+    height: 25px;
+}
+
+/*Icon when accordion body in activated position*/
+.selectedIcon {
+    background-image: url(/img/green-arrow-down.png) !important;
+    width: 25px;
+    height: 25px;
+}

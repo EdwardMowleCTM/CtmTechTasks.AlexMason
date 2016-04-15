@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head>
+
         <meta charset="utf-8">
-        <title>SimpleGulp</title>
+        <title>Credit Card Details</title>
         <link rel="stylesheet" href="css/main.css">
+
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+
+        <!-- CDNs for jquery and jquery ui -->
+        <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+        <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
     </head>
     <body>
-        <h1>SimpleGulp</h1>
-        <p>The simplest possible starting point for prototyping.</p>
+
+        <nav>
+            <!-- CTM logo -->
+            <div class="ctm-logo">
+                <img src="img/ctm-logo.svg" />
+            </div>
+            <div id="nav-buttons">
+                <!-- Navigation buttons -->
+                <div class="button">
+                    <button id="hometab"><img src="/img/icons/home.png" /></button>
+                </div>
+                <div class="button">
+                    <button id="maintab"><img src="/img/icons/vehicle.png" /><b>Vehicles</b></button>
+                </div>
+                <div class="button">
+                    <button id="maintab"><img src="/img/icons/homeandpet.png" /><b>Home & pet</b></button>
+                </div>
+                <div class="button">
+                    <button id="maintab"><img src="/img/icons/finance.png" /><b>Finances</b></button>
+                </div>
+                <div class="button">
+                    <button id="maintab"><img src="/img/icons/life.png" /><b>Life</b></button>
+                </div>
+                <div class="button">
+                    <button id="maintab"><img src="/img/icons/business.png" /><b>Business</b></button>
+                </div>
+                <div class="button">
+                    <button id="maintab"><img src="/img/icons/travel.png" /><b>Travel</b></button>
+                </div>
+            </div>
+        </nav>
+
+        <section>
+            <!-- Accordion section, created by jquery and jquery ui -->
+            <div id="accordion"></div>
+        </section>
+
+        <!-- Javascript link -->
         <script src="js/main.js"></script>
+
     </body>
 </html>
