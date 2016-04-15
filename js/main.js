@@ -6,7 +6,7 @@ function sortJsonAPR(a, b) {
 //Begins when the page has finished loading, makes sure json data can be loaded
 $(document).ready(function() {
 
-    var index = 1; //Iterates to give unique ID's to certain elements
+    var index = 1; //Iterates to give unique ID's and classes to certain elements
     var cardList = new Array(); //Array to store card names
 
     $.getJSON('cards.json', function(data) {
@@ -14,20 +14,21 @@ $(document).ready(function() {
         $.each(data, function(i, creditCard) {
             //Inserts credit card name and apr into accordion header
             $('#accordion').append('<h3 id="header' + index + '"><b>' + creditCard.name +
-                '<p id="apr">' + creditCard.apr + '% APR</p></b></h3>');
+                '<p class="apr">' + creditCard.apr + '% APR</p></b></h3>');
             //Appends APR data to array
             cardList.push(creditCard.code);
             //Inserts credit card image, information an cashback into accordion body
-            $('#header' + index).after('<div id="accordionContent"><img src="/img/' +
-                creditCard.code.toLowerCase() + '.png"/><p id="information"' + index + '">' +
-                creditCard.information + '</p><p id="cashback' + index + '">Cashback</p><p id="cashbackValue' +
-                index + '">' + "£" + creditCard.cashback + '</p></div>');
+            $('#header' + index).after('<div class="accordionContent"><img src="/img/' +
+                creditCard.code.toLowerCase() + '.png"/>' +
+                '<p class="information">' + creditCard.information + '</p>' +
+                '<p class="cashback" id="cashback-sign' + index + '">Cashback</p>' +
+                '<p class="cashbackValue" id="cashback-value' + index + '">' + "£" + creditCard.cashback + '</p></div>');
 
             index = index + 1;
         });
         //Iterates to ensure seperate card details populate one accordion body each
         $.each(cardList, function(i, list) {
-            $("#" + list).nextUntil("h3").wrapAll("<div></div>");
+            $("#" + list).nextUntil("h3");
         });
 
         $(function() {
