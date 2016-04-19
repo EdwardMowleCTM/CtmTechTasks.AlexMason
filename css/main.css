@@ -49,9 +49,6 @@ header {
         position: relative;
         top: -4px;
         padding-left: 40px; }
-      header #menu-div li img {
-        padding: 2px;
-        border: 1px solid #fff; }
       header #menu-div li img[alt="Home Button"] {
         position: relative;
         width: 33px;
@@ -143,7 +140,7 @@ header {
     font-size: 90%; }
   #accordion .cashback, #accordion .cashbackValue {
     position: relative;
-    top: -90%;
+    top: -100%;
     z-index: 1;
     float: right;
     width: 30px;
@@ -218,8 +215,22 @@ header {
     #accordion .cashbackValue {
       font-size: 20px; } }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
   #accordion h3 {
     font-size: 15px; }
-  #accordion .apr {
-    margin-right: -20px; } }
+    #accordion h3 .apr {
+      margin-right: -10px; }
+  #accordion .accordionContent .information {
+    font-size: 10px; }
+  #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue, #accordion .accordionContent .cashbackValue {
+    position: relative;
+    left: 10px;
+    font-size: 90%; } }
+
+@media (max-width: 460px) {
+  #accordion h3 {
+    font-size: 12px; }
+  #accordion .accordionContent img {
+    height: 80px; }
+  #accordion .accordionContent .information {
+    margin-top: 35px; } }

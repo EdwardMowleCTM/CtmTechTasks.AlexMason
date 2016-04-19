@@ -63,10 +63,6 @@ header {
         top: -4px;
         padding-left: 40px;
       }
-      img {
-        padding: 2px;
-        border: 1px solid #fff;
-      }
       img[alt="Home Button"] {
         position: relative;
         width: 33px;
@@ -190,8 +186,7 @@ header {
 
   .cashback {
     position: relative;
-    top: -90%;
-    // left: 600px;
+    top: -100%;
     z-index: 1;
     float: right;
     width: 30px;
@@ -314,14 +309,46 @@ header {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 600px) {
   #accordion {
     h3 {
       font-size: 15px;
-    }
 
-    .apr {
-      margin-right: -20px;
+      .apr {
+        margin-right: -10px;
+      }
+    }
+    .accordionContent {
+      .information {
+          font-size: 10px;
+      }
+      .cashback, .cashbackValue {
+        position: relative;
+        left: 10px;
+        font-size: 90%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .ctm-logo {
+    width: 100px;
+  }
+  #accordion {
+    h3 {
+      font-size: 12px;
+    }
+    .accordionContent {
+      img {
+        height: 80px;
+      }
+      .information {
+        margin-top: 35px;
+      }
+      .cashback, .cashbackValue {
+        font-size: 80%;
+      }
     }
   }
 }

@@ -64,9 +64,4 @@ $(document).ready(function() {
         isOpen = false;
       }
     });
-
-    // $(document).on('resize', function() {
-    //
-    // });
-
 });
