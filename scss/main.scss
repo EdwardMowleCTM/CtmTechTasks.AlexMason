@@ -1,4 +1,5 @@
 $colour-gradient: linear-gradient(#000099,#000033);
+$defualt-font-family: "Arial", Helvetica, sans-serif;
 
 
 body {
@@ -56,7 +57,7 @@ header {
     li {
       padding-top: 20px;
       list-style-type: none;
-      color: white;
+      color: #fff;
       cursor: pointer;
       span {
         position: relative;
@@ -89,8 +90,8 @@ header {
       top: 8px;
       padding: .7% 1.4% .9% 1.4%;
       border: 0;
-      color: white;
-      background-color: black;
+      color: #fff;
+      background-color: #000;
       border-radius: 20%;
       outline: none;
     }
@@ -103,8 +104,8 @@ header {
       border: 0;
       border-radius: 10px;
       margin-right: .5%;
-      color: white;
-      font-family: "Arial", Helvetica, sans-serif;
+      color: #fff;
+      font-family: $defualt-font-family;
       font-size: 100%;
       background: $colour-gradient;
       outline: none;
@@ -129,9 +130,9 @@ header {
     border: 0;
     border-radius: 10px;
     margin-top: 2%;
-    font-family: "Arial", Helvetica, sans-serif;
+    font-family: $defualt-font-family;
     font-size: 140%;
-    color: white;
+    color: #fff;
     background: $colour-gradient;
   }
 
@@ -159,10 +160,10 @@ header {
     height: 200px;
     width: 100%;
     z-index: 3;
-    border: 0px;
-    padding: 0px;
-    border-radius: 0px 0px 10px 10px;
-    background-color: white;
+    border: 0;
+    padding: 0;
+    border-radius: 0 0 10px 10px;
+    background-color: #fff;
     overflow: hidden;
   }
 
@@ -186,13 +187,13 @@ header {
 
   .cashback {
     position: relative;
-    top: -100%;
+    top: -95%;
     z-index: 1;
     float: right;
     width: 30px;
     margin: 0;
     margin-right: 20%;
-    font-family: "Arial", Helvetica, sans-serif;
+    font-family: $defualt-font-family;
     font-size: 25px;
   }
 
@@ -333,7 +334,7 @@ header {
 
 @media (max-width: 480px) {
   .ctm-logo {
-    width: 100px;
+    width: 200px;
   }
   #accordion {
     h3 {
@@ -349,6 +350,59 @@ header {
       .cashback, .cashbackValue {
         font-size: 80%;
       }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  h3 {
+    height: 30px;
+    .creditCard-name, .apr {
+      position: relative;
+      top: 7px;
+    }
+    .apr {
+      position: relative;
+      left: 15px;
+    }
+  }
+  #accordion {
+    .accordionContent {
+      img {
+        position: relative;
+        top: -8px;
+        height: 70px;
+        width: 100px;
+        padding-right: 56px;
+        border-right: 1px solid #000;
+        margin-bottom: 0;
+      }
+      .information {
+        position: relative;
+        top: -40px;
+        left: 0px;
+        padding-top: 40px;
+        margin-top: 0;
+        font-size: 8px;
+      }
+      .cashback, .cashbackValue {
+        position: relative;
+        left: -20px;
+        margin-top: 60px;
+      }
+      .cashbackValue {
+        margin-top: 80px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  #accordion {
+    .accordionContent {
+        img {
+          padding-right: 40px;
+        }
     }
   }
 }
