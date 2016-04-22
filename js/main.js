@@ -36,23 +36,39 @@ $(document).ready(function() {
 
     // Side tab functionality
     var windowHeight = window.innerHeight;
+    var windowWidth = window.innerWidth;
     var isOpen = false;
 
+    function slideMenuOpen() {
+        $('.container').animate({left: "+=300px"}, 300);
+        $('#menu-div').animate({left: "+=0px"}, 300);
+        return (isOpen = true);
+    }
+
+    function slideMenuClose() {
+        $('.container').animate({left: "-=300px"}, 300);
+        $('#menu-div').animate({left: "-=0px"}, 300);
+        return (isOpen = false);
+    }
+
     $('#menu-div').hide();
-    $('#menu-div').css({height: windowHeight});
+    $('nav').css({height: windowHeight});
 
 
     $('#menu-button').click(function() {
-      if (!isOpen) {
-        $('#menu-div').show();
-        $('.container').animate({left: "+=300px"}, 300);
-        $('#menu-div').animate({left: "+=0px"}, 300);
-        isOpen = true;
-      } else {
+        if (isOpen) {
+            slideMenuClose();
+        } else {
+            slideMenuOpen();
+        }
+    });
+
+    $(window).on('resize', function() {
+        if (isOpen) {
         $('.container').animate({left: "-=300px"}, 300);
         $('#menu-div').animate({left: "-=0px"}, 300);
-        $('#menu-div').hide(400);
+        $('#menu-div').hide();
         isOpen = false;
-      }
+        }
     });
 });

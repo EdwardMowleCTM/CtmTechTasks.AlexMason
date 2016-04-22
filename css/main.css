@@ -22,39 +22,15 @@ header {
     padding: 2px;
     padding-left: 24px;
     border-radius: 5px;
-    background-color: #000;
+    background-color: #000074;
     cursor: pointer;
     visibility: hidden; }
-  header #menu-button, header .ctm-logo {
-    display: inline-block; }
-  header #menu-button:hover {
-    -ms-transform: scale(1.05, 1.05);
-    -webkit-transform: scale(1.05, 1.05);
-    transform: scale(1.05, 1.05); }
-  header #menu-div {
-    position: absolute;
-    top: -18px;
-    left: -320px;
-    z-index: 10;
-    width: 300px;
-    background-color: #000; }
-    header #menu-div ul {
-      font-size: 20px; }
-    header #menu-div li {
-      padding-top: 20px;
-      list-style-type: none;
-      color: #fff;
-      cursor: pointer; }
-      header #menu-div li span {
-        position: relative;
-        top: -4px;
-        padding-left: 40px; }
-      header #menu-div li img[alt="Home Button"] {
-        position: relative;
-        width: 33px;
-        left: 80px; }
-      header #menu-div li span:nth-of-type(an + b) {
-        left: -5px; }
+    header #menu-button .ctm-logo {
+      display: inline-block; }
+    header #menu-button:hover {
+      -ms-transform: scale(1.05, 1.05);
+      -webkit-transform: scale(1.05, 1.05);
+      transform: scale(1.05, 1.05); }
   header nav {
     width: 100%; }
     header nav .nav-button, header nav #home-tab {
@@ -69,10 +45,10 @@ header {
       background-color: #000;
       border-radius: 20%;
       outline: none; }
-    header nav #home-tab img {
-      padding-top: 34%; }
+      header nav #home-tab img {
+        padding-top: 34%; }
     header nav .nav-button {
-      padding: 1.5% 2.92% 1.5% 2.92%;
+      padding: 1.5% 3.84% 1.5% 2%;
       border: 0;
       border-radius: 10px;
       margin-right: .5%;
@@ -81,17 +57,15 @@ header {
       font-size: 100%;
       background: linear-gradient(#000099, #000033);
       outline: none; }
-    header nav .nav-button img {
-      padding-bottom: 2%; }
+      header nav .nav-button img {
+        padding-bottom: 2%; }
 
 /*Accordion styles*/
 #accordion {
   /*Accordion div position*/
   width: 100%;
-  margin-top: 5%;
-  /*Accordion body controls*/
-  /*Icon when accordion body in default position*/
-  /*Icon when accordion body in activated position*/ }
+  margin-top: -83%;
+  /*Accordion body controls*/ }
   #accordion h3 {
     width: 100%;
     z-index: 3;
@@ -102,18 +76,28 @@ header {
     font-family: "Arial", Helvetica, sans-serif;
     font-size: 140%;
     color: #fff;
-    background: linear-gradient(#000099, #000033); }
-  #accordion .apr, #accordion .creditCard-name {
-    display: inline;
-    width: 20%; }
-  #accordion .creditCard-name {
-    margin-left: 40px; }
-  #accordion .apr {
-    width: 130px;
-    padding: 0;
-    margin: 0;
-    margin-right: 10px;
-    float: right; }
+    background: linear-gradient(#000099, #000033);
+    /*Icon when accordion body in default position*/
+    /*Icon when accordion body in activated position*/ }
+    #accordion h3 .apr, #accordion h3 .creditCard-name {
+      display: inline;
+      width: 20%; }
+    #accordion h3 .creditCard-name {
+      margin-left: 40px; }
+    #accordion h3 .apr {
+      width: 130px;
+      padding: 0;
+      margin: 0;
+      margin-right: 10px;
+      float: right; }
+    #accordion h3 .defaultIcon {
+      background-image: url(/img/green-arrow-right.png) !important;
+      width: 25px;
+      height: 25px; }
+    #accordion h3 .selectedIcon {
+      background-image: url(/img/green-arrow-down.png) !important;
+      width: 25px;
+      height: 25px; }
   #accordion .accordionContent {
     position: relative;
     bottom: 5px;
@@ -125,48 +109,42 @@ header {
     border-radius: 0 0 10px 10px;
     background-color: #fff;
     overflow: hidden; }
-  #accordion img {
-    z-index: 2;
-    margin: 30px 10px 0 30px; }
-  #accordion .information {
-    position: relative;
-    top: -65%;
-    left: 18%;
-    z-index: 1;
-    width: 45%;
-    padding: 10px;
-    border-right: 1px solid grey;
-    margin: 0;
-    font-size: 90%; }
-  #accordion .cashback, #accordion .cashbackValue {
-    position: relative;
-    top: -95%;
-    z-index: 1;
-    float: right;
-    width: 30px;
-    margin: 0;
-    margin-right: 20%;
-    font-family: "Arial", Helvetica, sans-serif;
-    font-size: 25px; }
-  #accordion .cashbackValue {
-    margin-right: -30px;
-    margin-top: 35px;
-    font-size: 30px; }
-  #accordion #cashback-sign2, #accordion #cashback-value2 {
-    position: relative;
-    top: -110%; }
-  #accordion #cashback-sign4, #accordion #cashback-value4 {
-    position: relative;
-    top: -100%; }
-  #accordion .defaultIcon {
-    background-image: url(/img/green-arrow-right.png) !important;
-    width: 25px;
-    height: 25px; }
-  #accordion .selectedIcon {
-    background-image: url(/img/green-arrow-down.png) !important;
-    width: 25px;
-    height: 25px; }
+    #accordion .accordionContent img {
+      z-index: 2;
+      margin: 30px 10px 0 30px; }
+    #accordion .accordionContent .information {
+      position: relative;
+      top: -65%;
+      left: 18%;
+      z-index: 1;
+      width: 45%;
+      padding: 10px;
+      border-right: 1px solid grey;
+      margin: 0;
+      font-size: 90%; }
+    #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue {
+      position: relative;
+      top: -95%;
+      z-index: 1;
+      float: right;
+      width: 30px;
+      font-family: "Arial", Helvetica, sans-serif; }
+    #accordion .accordionContent .cashback {
+      margin: 0;
+      margin-right: 20%;
+      font-size: 25px; }
+    #accordion .accordionContent .cashbackValue {
+      margin-right: -30px;
+      margin-top: 35px;
+      font-size: 30px; }
+    #accordion .accordionContent #cashback-sign2, #accordion .accordionContent #cashback-value2 {
+      position: relative;
+      top: -110%; }
+    #accordion .accordionContent #cashback-sign4, #accordion .accordionContent #cashback-value4 {
+      position: relative;
+      top: -100%; }
 
+/*Responsive Media Styles*/
 @media (max-width: 1050px) {
   .container {
     top: 10px; }
@@ -175,22 +153,40 @@ header {
     .container header #menu-button {
       visibility: visible; }
     .container header nav {
-      visibility: hidden; }
+      position: absolute;
+      top: -18px;
+      left: -320px;
+      background: linear-gradient(#000099, #000033);
+      width: 300px; }
+    .container header .nav-button, .container header #home-tab {
+      position: relative;
+      top: -10%;
+      display: block;
+      margin-top: 30px;
+      margin-left: 10px;
+      background: none; }
+      .container header .nav-button b, .container header #home-tab b {
+        position: relative;
+        top: -4px;
+        padding-left: 40px; }
+      .container header .nav-button img, .container header #home-tab img {
+        width: 17%;
+        display: inline; }
+      .container header .nav-button img[alt="Home Image"], .container header #home-tab img[alt="Home Image"] {
+        position: relative;
+        left: 38%; }
     .container #accordion {
       position: absolute;
       top: 40%;
-      margin-top: 0; }
-      .container #accordion .cashback, .container #accordion .cashbackValue {
-        margin-top: 20px; }
+      margin-top: 5%; }
+      .container #accordion .cashback {
+        margin-top: 5px; }
       .container #accordion .cashbackValue {
         margin-top: 45px; } }
 
 @media (max-width: 930px) {
   #accordion {
     margin-top: 50px; }
-    #accordion .accordionContent {
-      width: 84%;
-      margin: 0 auto; }
     #accordion h3 {
       font-size: 120%;
       width: 84%;
@@ -201,19 +197,22 @@ header {
         margin-left: 30px; }
       #accordion h3 .apr {
         width: 100px; }
-    #accordion img {
-      width: 18%;
-      height: 50%;
-      margin-left: 15px; }
-    #accordion .information {
-      left: 22%;
-      margin-top: 15px;
-      font-size: 12px; }
-    #accordion .cashback, #accordion .cashbackValue {
-      font-size: 17px;
-      margin-bottom: 40px; }
-    #accordion .cashbackValue {
-      font-size: 20px; } }
+    #accordion .accordionContent {
+      width: 84%;
+      margin: 0 auto; }
+      #accordion .accordionContent img {
+        width: 18%;
+        height: 50%;
+        margin-left: 15px; }
+      #accordion .accordionContent .information {
+        left: 22%;
+        margin-top: 15px;
+        font-size: 12px; }
+      #accordion .accordionContent .cashback {
+        font-size: 22px;
+        margin-bottom: 40px; }
+      #accordion .accordionContent .cashbackValue {
+        font-size: 24px; } }
 
 @media (max-width: 600px) {
   #accordion h3 {
@@ -222,7 +221,7 @@ header {
       margin-right: -10px; }
   #accordion .accordionContent .information {
     font-size: 10px; }
-  #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue, #accordion .accordionContent .cashbackValue {
+  #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue {
     position: relative;
     left: 10px;
     font-size: 90%; } }
@@ -236,7 +235,7 @@ header {
     height: 80px; }
   #accordion .accordionContent .information {
     margin-top: 35px; }
-  #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue, #accordion .accordionContent .cashbackValue {
+  #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue {
     font-size: 80%; } }
 
 @media (max-width: 420px) {
@@ -263,7 +262,7 @@ header {
     padding-top: 40px;
     margin-top: 0;
     font-size: 8px; }
-  #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue, #accordion .accordionContent .cashbackValue {
+  #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue {
     position: relative;
     left: -20px;
     margin-top: 60px; }
@@ -272,4 +271,8 @@ header {
 
 @media (max-width: 380px) {
   #accordion .accordionContent img {
-    padding-right: 40px; } }
+    padding-right: 13.5%; } }
+
+@media (max-width: 330px) {
+  #accordion .accordionContent img {
+    padding-right: 12px; } }
