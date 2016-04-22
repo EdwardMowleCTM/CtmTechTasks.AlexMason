@@ -1,25 +1,34 @@
 //Function to sort the json data by lowest to highest APR value
-function sortJsonAPR(a, b) {
+function sortJsonByAPR(a, b) {
     return a.apr > b.apr ? 1 : -1;
+}
+
+function sortJsonByCashback(a, b) {
+    return a.cashback > b.cashback ? 1 : -1;
+}
+
+function sortJsonByAnnualFee(a, b) {
+    return a.annualFee > b.annualFee ? 1 : -1;
 }
 
 //Begins when the page has finished loading, makes sure json data can be loaded
 $(document).ready(function() {
-
     var index = 1; //Iterates to give unique ID's and classes to certain elements
-
     $.getJSON('cards.json', function(data) {
-        data = $(data).sort(sortJsonAPR);
+        data = $(data).sort(sortJsonByCashback);
         $.each(data, function(i, creditCard) {
             //Inserts credit card name and apr into accordion header
             $('#accordion').append('<h3 id="header' + index + '"><b><span class="creditCard-name">' + creditCard.name +
             '</span><span class="apr">' + creditCard.apr + '% APR</span></b></h3>');
             //Inserts credit card image, information an cashback into accordion body
-            $('#header' + index).after('<div class="accordionContent"><img src="/img/' +
-                creditCard.code.toLowerCase() + '.png"/>' +
+            $('#header' + index).after('<div class="accordionContent"><img src="/img/' + creditCard.code.toLowerCase() + '.png"/>' +
                 '<p class="information">' + creditCard.information + '</p>' +
                 '<p class="cashback" id="cashback-sign' + index + '">Cashback</p>' +
-                '<p class="cashbackValue" id="cashback-value' + index + '">£' + creditCard.cashback + '</p></div>');
+                '<p class="cashbackValue" id="cashback-value' + index + '">£' + creditCard.cashback + '</p>' +
+                '<p class="aprAccBody" id="apr-sign' + index + '">APR</p>' +
+                '<p class="aprAccBodyValue" id="apr-value' + index + '">' + creditCard.apr + '%</p>' +
+                '<p class="annFee" id="annFee-sign' + index + '">Annual Fee</p>' +
+                '<p class="annFeeValue" id="annFee-value' + index + '">' + creditCard.annualFee + '</p></div>');
 
                 index++;
         });

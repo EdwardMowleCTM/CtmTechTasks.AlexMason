@@ -44,6 +44,7 @@ header {
   /*Normal nav styles*/
   nav {
     width: 100%;
+    height: 100%;
     .nav-button, #home-tab {
       display: inline-flex;
       cursor: pointer;
@@ -179,13 +180,70 @@ header {
     }
 
     #cashback-sign2, #cashback-value2 {
-      position: relative;
       top: -110%;
     }
 
     #cashback-sign4, #cashback-value4 {
-      position: relative;
       top: -100%;
+    }
+
+    .aprAccBody, .aprAccBodyValue {
+      position: relative;
+      font-family: $defualt-font-family;
+    }
+
+    .aprAccBody {
+      top: -70%;
+      left: 21%;
+      z-index: 1;
+      float: right;
+      width: 30px;
+      margin-bottom: 20px;
+      font-size: 22px;
+      float: left;
+    }
+
+    .aprAccBodyValue {
+      top: -55%;
+      left: 18%;
+      font-size: 26px;
+    }
+
+    #apr-sign2, #apr-sign4 {
+      top: -75%;
+    }
+
+    #apr-value2, #apr-value4 {
+      top: -62%;
+    }
+
+    .annFee, .annFeeValue {
+      position: relative;
+      font-family: $defualt-font-family;
+    }
+
+    .annFee {
+      top: -113%;
+      left: 37%;
+      z-index: 1;
+      margin-left: 30px;
+      float: left;
+      width: 130px;
+      font-size: 22px;
+    }
+
+    .annFeeValue {
+      top: -88%;
+      left: 24%;
+      font-size: 30px;
+    }
+
+    #annFee-sign2, #annFee-sign4 {
+      top: -118%;
+    }
+
+    #annFee-value2, #annFee-value4  {
+      top: -96%;
     }
   }
 }
@@ -218,7 +276,7 @@ header {
         background: none;
         b {
           position: relative;
-          top: -4px;
+          top: -15px;
           padding-left: 40px;
         }
         img {
@@ -291,6 +349,29 @@ header {
         // margin-top: 25px;
         font-size: 24px;
       }
+
+      .aprAccBody {
+        font-size: 18px;
+        margin-left: 22px;
+      }
+
+      .aprAccBodyValue {
+        position: relative;
+        left: 17%;
+        font-size: 22px;
+      }
+
+      .annFee {
+        margin-top: 32px;
+        font-size: 18px;
+      }
+
+      .annFeeValue {
+        position: relative;
+        left: 22%;
+        margin-top: 37px;
+        font-size: 26px;
+      }
     }
   }
 }
@@ -313,6 +394,23 @@ header {
         left: 10px;
         font-size: 90%;
       }
+      .aprAccBody,
+      .aprAccBodyValue,
+      .annFee,
+      .annFeeValue {
+        position: relative;
+        font-size: 90%;
+      }
+
+      .annFee {
+        position: relative;
+        top: -104%;
+      }
+
+     .annFeeValue {
+       top: -84%;
+       left: 14%;
+     }
     }
   }
 }

@@ -32,7 +32,8 @@ header {
       -webkit-transform: scale(1.05, 1.05);
       transform: scale(1.05, 1.05); }
   header nav {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
     header nav .nav-button, header nav #home-tab {
       display: inline-flex;
       cursor: pointer; }
@@ -138,11 +139,48 @@ header {
       margin-top: 35px;
       font-size: 30px; }
     #accordion .accordionContent #cashback-sign2, #accordion .accordionContent #cashback-value2 {
-      position: relative;
       top: -110%; }
     #accordion .accordionContent #cashback-sign4, #accordion .accordionContent #cashback-value4 {
-      position: relative;
       top: -100%; }
+    #accordion .accordionContent .aprAccBody, #accordion .accordionContent .aprAccBodyValue {
+      position: relative;
+      font-family: "Arial", Helvetica, sans-serif; }
+    #accordion .accordionContent .aprAccBody {
+      top: -70%;
+      left: 21%;
+      z-index: 1;
+      float: right;
+      width: 30px;
+      margin-bottom: 20px;
+      font-size: 22px;
+      float: left; }
+    #accordion .accordionContent .aprAccBodyValue {
+      top: -55%;
+      left: 18%;
+      font-size: 26px; }
+    #accordion .accordionContent #apr-sign2, #accordion .accordionContent #apr-sign4 {
+      top: -75%; }
+    #accordion .accordionContent #apr-value2, #accordion .accordionContent #apr-value4 {
+      top: -62%; }
+    #accordion .accordionContent .annFee, #accordion .accordionContent .annFeeValue {
+      position: relative;
+      font-family: "Arial", Helvetica, sans-serif; }
+    #accordion .accordionContent .annFee {
+      top: -113%;
+      left: 37%;
+      z-index: 1;
+      margin-left: 30px;
+      float: left;
+      width: 130px;
+      font-size: 22px; }
+    #accordion .accordionContent .annFeeValue {
+      top: -88%;
+      left: 24%;
+      font-size: 30px; }
+    #accordion .accordionContent #annFee-sign2, #accordion .accordionContent #annFee-sign4 {
+      top: -118%; }
+    #accordion .accordionContent #annFee-value2, #accordion .accordionContent #annFee-value4 {
+      top: -96%; }
 
 /*Responsive Media Styles*/
 @media (max-width: 1050px) {
@@ -167,7 +205,7 @@ header {
       background: none; }
       .container header .nav-button b, .container header #home-tab b {
         position: relative;
-        top: -4px;
+        top: -15px;
         padding-left: 40px; }
       .container header .nav-button img, .container header #home-tab img {
         width: 17%;
@@ -212,7 +250,22 @@ header {
         font-size: 22px;
         margin-bottom: 40px; }
       #accordion .accordionContent .cashbackValue {
-        font-size: 24px; } }
+        font-size: 24px; }
+      #accordion .accordionContent .aprAccBody {
+        font-size: 18px;
+        margin-left: 22px; }
+      #accordion .accordionContent .aprAccBodyValue {
+        position: relative;
+        left: 17%;
+        font-size: 22px; }
+      #accordion .accordionContent .annFee {
+        margin-top: 32px;
+        font-size: 18px; }
+      #accordion .accordionContent .annFeeValue {
+        position: relative;
+        left: 22%;
+        margin-top: 37px;
+        font-size: 26px; } }
 
 @media (max-width: 600px) {
   #accordion h3 {
@@ -224,7 +277,19 @@ header {
   #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue {
     position: relative;
     left: 10px;
-    font-size: 90%; } }
+    font-size: 90%; }
+  #accordion .accordionContent .aprAccBody,
+  #accordion .accordionContent .aprAccBodyValue,
+  #accordion .accordionContent .annFee,
+  #accordion .accordionContent .annFeeValue {
+    position: relative;
+    font-size: 90%; }
+  #accordion .accordionContent .annFee {
+    position: relative;
+    top: -104%; }
+  #accordion .accordionContent .annFeeValue {
+    top: -84%;
+    left: 14%; } }
 
 @media (max-width: 480px) {
   .ctm-logo {
