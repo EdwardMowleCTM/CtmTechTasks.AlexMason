@@ -61,126 +61,139 @@ header {
       header nav .nav-button img {
         padding-bottom: 2%; }
 
-/*Accordion styles*/
-#accordion {
-  /*Accordion div position*/
-  width: 100%;
-  margin-top: -83%;
-  /*Accordion body controls*/ }
-  #accordion h3 {
-    width: 100%;
-    z-index: 3;
-    padding: 3% 0 3% 0;
-    border: 0;
-    border-radius: 10px;
-    margin-top: 2%;
+.main-body {
+  /*Accordion styles*/ }
+  .main-body .sortBySelect {
+    position: absolute;
+    top: 18%;
+    width: 15%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-style: italic; }
+  .main-body label {
+    position: absolute;
+    top: 15%;
     font-family: "Arial", Helvetica, sans-serif;
-    font-size: 140%;
-    color: #fff;
-    background: linear-gradient(#000099, #000033);
-    /*Icon when accordion body in default position*/
-    /*Icon when accordion body in activated position*/ }
-    #accordion h3 .apr, #accordion h3 .creditCard-name {
-      display: inline;
-      width: 20%; }
-    #accordion h3 .creditCard-name {
-      margin-left: 40px; }
-    #accordion h3 .apr {
-      width: 130px;
-      padding: 0;
-      margin: 0;
-      margin-right: 10px;
-      float: right; }
-    #accordion h3 .defaultIcon {
-      background-image: url(/img/green-arrow-right.png) !important;
-      width: 25px;
-      height: 25px; }
-    #accordion h3 .selectedIcon {
-      background-image: url(/img/green-arrow-down.png) !important;
-      width: 25px;
-      height: 25px; }
-  #accordion .accordionContent {
-    position: relative;
-    bottom: 5px;
-    height: 200px;
+    color: #fff; }
+  .main-body #accordion {
+    /*Accordion div position*/
     width: 100%;
-    z-index: 3;
-    border: 0;
-    padding: 0;
-    border-radius: 0 0 10px 10px;
-    background-color: #fff;
-    overflow: hidden; }
-    #accordion .accordionContent img {
-      z-index: 2;
-      margin: 30px 10px 0 30px; }
-    #accordion .accordionContent .information {
+    margin-top: -80%;
+    /*Accordion body controls*/ }
+    .main-body #accordion h3 {
+      width: 100%;
+      z-index: 3;
+      padding: 3% 0 3% 0;
+      border: 0;
+      border-radius: 10px;
+      margin-top: 2%;
+      font-family: "Arial", Helvetica, sans-serif;
+      font-size: 140%;
+      color: #fff;
+      background: linear-gradient(#000099, #000033);
+      /*Icon when accordion body in default position*/
+      /*Icon when accordion body in activated position*/ }
+      .main-body #accordion h3 .headerDisplay, .main-body #accordion h3 .creditCard-name {
+        display: inline;
+        width: 20%; }
+      .main-body #accordion h3 .creditCard-name {
+        margin-left: 40px; }
+      .main-body #accordion h3 .headerDisplay {
+        width: 21.1%;
+        padding: 0;
+        margin: 0;
+        margin-right: 10px;
+        float: right; }
+      .main-body #accordion h3 .defaultIcon {
+        background-image: url(/img/green-arrow-right.png) !important;
+        width: 25px;
+        height: 25px; }
+      .main-body #accordion h3 .selectedIcon {
+        background-image: url(/img/green-arrow-down.png) !important;
+        width: 25px;
+        height: 25px; }
+    .main-body #accordion .accordionContent {
       position: relative;
-      top: -65%;
-      left: 18%;
-      z-index: 1;
-      width: 45%;
-      padding: 10px;
-      border-right: 1px solid grey;
-      margin: 0;
-      font-size: 90%; }
-    #accordion .accordionContent .cashback, #accordion .accordionContent .cashbackValue {
-      position: relative;
-      top: -95%;
-      z-index: 1;
-      float: right;
-      width: 30px;
-      font-family: "Arial", Helvetica, sans-serif; }
-    #accordion .accordionContent .cashback {
-      margin: 0;
-      margin-right: 20%;
-      font-size: 25px; }
-    #accordion .accordionContent .cashbackValue {
-      margin-right: -30px;
-      margin-top: 35px;
-      font-size: 30px; }
-    #accordion .accordionContent #cashback-sign2, #accordion .accordionContent #cashback-value2 {
-      top: -110%; }
-    #accordion .accordionContent #cashback-sign4, #accordion .accordionContent #cashback-value4 {
-      top: -100%; }
-    #accordion .accordionContent .aprAccBody, #accordion .accordionContent .aprAccBodyValue {
-      position: relative;
-      font-family: "Arial", Helvetica, sans-serif; }
-    #accordion .accordionContent .aprAccBody {
-      top: -70%;
-      left: 21%;
-      z-index: 1;
-      float: right;
-      width: 30px;
-      margin-bottom: 20px;
-      font-size: 22px;
-      float: left; }
-    #accordion .accordionContent .aprAccBodyValue {
-      top: -55%;
-      left: 18%;
-      font-size: 26px; }
-    #accordion .accordionContent #apr-sign2, #accordion .accordionContent #apr-sign4 {
-      top: -75%; }
-    #accordion .accordionContent #apr-value2, #accordion .accordionContent #apr-value4 {
-      top: -62%; }
-    #accordion .accordionContent .annFee, #accordion .accordionContent .annFeeValue {
-      position: relative;
-      font-family: "Arial", Helvetica, sans-serif; }
-    #accordion .accordionContent .annFee {
-      top: -113%;
-      left: 37%;
-      z-index: 1;
-      margin-left: 30px;
-      float: left;
-      width: 130px;
-      font-size: 22px; }
-    #accordion .accordionContent .annFeeValue {
-      top: -88%;
-      left: 24%;
-      font-size: 30px; }
-    #accordion .accordionContent #annFee-sign2, #accordion .accordionContent #annFee-sign4 {
-      top: -118%; }
-    #accordion .accordionContent #annFee-value2, #accordion .accordionContent #annFee-value4 {
-      top: -96%; }
+      bottom: 5px;
+      height: 200px;
+      width: 100%;
+      z-index: 3;
+      border: 0;
+      padding: 0;
+      border-radius: 0 0 10px 10px;
+      background-color: #fff;
+      overflow: hidden; }
+      .main-body #accordion .accordionContent img {
+        z-index: 2;
+        margin: 30px 10px 0 30px; }
+      .main-body #accordion .accordionContent .information {
+        position: relative;
+        top: -65%;
+        left: 18%;
+        z-index: 1;
+        width: 45%;
+        padding: 10px;
+        border-right: 1px solid grey;
+        margin: 0;
+        font-size: 90%; }
+      .main-body #accordion .accordionContent .cashback, .main-body #accordion .accordionContent .cashbackValue {
+        position: relative;
+        top: -95%;
+        z-index: 1;
+        float: right;
+        width: 30px;
+        font-family: "Arial", Helvetica, sans-serif; }
+      .main-body #accordion .accordionContent .cashback {
+        margin: 0;
+        margin-right: 20%;
+        font-size: 25px; }
+      .main-body #accordion .accordionContent .cashbackValue {
+        margin-right: -30px;
+        margin-top: 35px;
+        font-size: 30px; }
+      .main-body #accordion .accordionContent #cashback-sign2, .main-body #accordion .accordionContent #cashback-value2 {
+        top: -110%; }
+      .main-body #accordion .accordionContent #cashback-sign4, .main-body #accordion .accordionContent #cashback-value4 {
+        top: -100%; }
+      .main-body #accordion .accordionContent .aprAccBody, .main-body #accordion .accordionContent .aprAccBodyValue {
+        position: relative;
+        font-family: "Arial", Helvetica, sans-serif; }
+      .main-body #accordion .accordionContent .aprAccBody {
+        top: -70%;
+        left: 21%;
+        z-index: 1;
+        float: right;
+        width: 30px;
+        margin-bottom: 20px;
+        font-size: 22px;
+        float: left; }
+      .main-body #accordion .accordionContent .aprAccBodyValue {
+        top: -55%;
+        left: 18%;
+        font-size: 26px; }
+      .main-body #accordion .accordionContent #apr-sign2, .main-body #accordion .accordionContent #apr-sign4 {
+        top: -75%; }
+      .main-body #accordion .accordionContent #apr-value2, .main-body #accordion .accordionContent #apr-value4 {
+        top: -62%; }
+      .main-body #accordion .accordionContent .annFee, .main-body #accordion .accordionContent .annFeeValue {
+        position: relative;
+        font-family: "Arial", Helvetica, sans-serif; }
+      .main-body #accordion .accordionContent .annFee {
+        top: -113%;
+        left: 37%;
+        z-index: 1;
+        margin-left: 30px;
+        float: left;
+        width: 130px;
+        font-size: 22px; }
+      .main-body #accordion .accordionContent .annFeeValue {
+        top: -88%;
+        left: 24%;
+        font-size: 30px; }
+      .main-body #accordion .accordionContent #annFee-sign2, .main-body #accordion .accordionContent #annFee-sign4 {
+        top: -118%; }
+      .main-body #accordion .accordionContent #annFee-value2, .main-body #accordion .accordionContent #annFee-value4 {
+        top: -96%; }
 
 /*Responsive Media Styles*/
 @media (max-width: 1050px) {
@@ -213,27 +226,34 @@ header {
       .container header .nav-button img[alt="Home Image"], .container header #home-tab img[alt="Home Image"] {
         position: relative;
         left: 38%; }
-    .container #accordion {
+    .container .main-body .sortBySelect {
       position: absolute;
-      top: 40%;
-      margin-top: 5%; }
-      .container #accordion .cashback {
+      top: 12%;
+      font-size: 14px; }
+    .container .main-body label {
+      position: absolute;
+      top: 9%;
+      font-family: "Arial", Helvetica, sans-serif;
+      color: #fff; }
+    .container .main-body #accordion {
+      margin-top: 7.5%; }
+      .container .main-body #accordion .cashback {
         margin-top: 5px; }
-      .container #accordion .cashbackValue {
+      .container .main-body #accordion .cashbackValue {
         margin-top: 45px; } }
 
 @media (max-width: 930px) {
   #accordion {
     margin-top: 50px; }
     #accordion h3 {
-      font-size: 120%;
-      width: 84%;
+      width: 50%;
       margin: 0 auto;
       margin-top: 20px;
-      font-size: 19px; }
+      font-size: 24px; }
       #accordion h3 .creditCard-name {
         margin-left: 30px; }
-      #accordion h3 .apr {
+      #accordion h3 .headerDisplay {
+        font-size: 24px;
         width: 100px; }
     #accordion .accordionContent {
       width: 84%;
@@ -245,7 +265,7 @@ header {
       #accordion .accordionContent .information {
         left: 22%;
         margin-top: 15px;
-        font-size: 12px; }
+        font-size: 10px; }
       #accordion .accordionContent .cashback {
         font-size: 22px;
         margin-bottom: 40px; }
@@ -265,12 +285,12 @@ header {
         position: relative;
         left: 22%;
         margin-top: 37px;
-        font-size: 26px; } }
+        font-size: 20px; } }
 
 @media (max-width: 600px) {
   #accordion h3 {
     font-size: 15px; }
-    #accordion h3 .apr {
+    #accordion h3 .headerDisplay {
       margin-right: -10px; }
   #accordion .accordionContent .information {
     font-size: 10px; }
@@ -306,10 +326,10 @@ header {
 @media (max-width: 420px) {
   h3 {
     height: 30px; }
-    h3 .creditCard-name, h3 .apr {
+    h3 .creditCard-name, h3 .headerDisplay {
       position: relative;
       top: 7px; }
-    h3 .apr {
+    h3 .headerDisplay {
       position: relative;
       left: 15px; }
   #accordion .accordionContent img {

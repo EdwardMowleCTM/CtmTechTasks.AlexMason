@@ -31,11 +31,15 @@
           <a class="nav-button"><img src="/img/icons/travel.png" alt="Travel Image"><b>Travel</b></a>
         </nav>
       </header>
-      <!-- Accordion section, created by jquery and jquery ui -->
       <section class="main-body">
-        <select>
-          <option name="byAPR" value="APR"></option>
+        <!-- Options to sort the JSON data -->
+        <label>Sort data by:</label>
+        <select class="sortBySelect">
+          <option value="APR">APR</option>
+          <option value="Cashback">Cashback</option>
+          <option value="AnnualFee">Annual Fee</option>
         </select>
+        <!-- Accordion section, created by jquery and jquery ui -->
         <div id="accordion"></div>
       </section>
     </div>
