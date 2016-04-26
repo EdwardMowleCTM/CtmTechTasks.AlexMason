@@ -46,12 +46,12 @@ $(document).ready(function() {
                 //Inserts credit card image, information an cashback into accordion body
                 $('#header' + index).after('<div class="accordionContent"><img src="/img/' + creditCard.code.toLowerCase() + '.png"/>' +
                     '<p class="information">' + creditCard.information + '</p>' +
-                    '<label class="cashback" id="cashback-' + creditCard.code.toLowerCase() + '">Cashback</label>' +
+                    '<div class="cashbackContainer"><label class="cashback" id="cashback-' + creditCard.code.toLowerCase() + '">Cashback</label>' +
                     '<p class="cashbackValue"  id="cashbackValue-' + creditCard.code.toLowerCase() + '">£' + creditCard.cashback + '</p>' +
-                    '<label class="aprAccBody">APR</label>' +
+                    '</div><div class="moreInfoContainer"><label class="aprAccBody">APR</label>' +
                     '<p class="aprAccBodyValue">' + creditCard.apr + '%</p>' +
                     '<label class="annFee">Annual Fee</label>' +
-                    '<p class="annFeeValue">£' + creditCard.annualFee + '</p></div>');
+                    '<p class="annFeeValue">£' + creditCard.annualFee + '</p></div></div>');
 
                     index++;
             });
