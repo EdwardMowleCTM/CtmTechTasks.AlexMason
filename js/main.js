@@ -19,9 +19,10 @@ $(document).ready(function() {
         }
     }
 
-    function getCardData() {
+    function getCardData(callback) {
         $.getJSON('cards.json', function(cardData) {
             data = $(cardData).sort(sortCardData);
+            callback( data );
         });
     }
 
@@ -73,8 +74,7 @@ $(document).ready(function() {
         });
     }
 
-     getCardData();
-     displayCards(data);
+    getCardData(displayCards);
 
     //SortBy drop down functionality
     $('.sortBySelect').on('change', function() {
