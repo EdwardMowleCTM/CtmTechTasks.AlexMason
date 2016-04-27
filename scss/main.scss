@@ -114,8 +114,9 @@ header {
         padding: 0;
         margin: 0;
         margin-right: 10px;
-        float: right;
+          float: right;
       }
+
       /*Icon when accordion body in default position*/
       .defaultIcon {
           background-image: url(/img/green-arrow-right.png) !important;
@@ -377,7 +378,7 @@ header {
       h3 {
         font-size: 90%;
         .headerDisplay {
-          width: 150px;
+          width: 140px;
         }
       }
       .accordionContent {
@@ -402,11 +403,6 @@ header {
 @media (max-width: 600px) {
   .main-body {
     #accordion {
-      h3 {
-        .headerDisplay {
-          margin-right: -10px;
-        }
-      }
       .accordionContent {
         img {
           height: 40%;
@@ -462,10 +458,17 @@ header {
     }
     #accordion {
       h3 {
-        font-size: 12px;
-      }
-      .headerDisplay {
-        width: 100px;
+        .creditCardName, .headerDisplay {
+          font-size: 12px;
+        }
+        .headerDisplay {
+          margin-right: -15px;
+          margin-top: 4px;
+        }
+        .headerDisplay {
+          position: relative;
+          left: 15px;
+        }
       }
       .accordionContent {
         img {
@@ -488,19 +491,6 @@ header {
       font-size: 16px;
     }
     #accordion {
-      h3 {
-        .creditCardName, .headerDisplay {
-          font-size: 12px;
-        }
-        .headerDisplay {
-          margin-right: -25px;
-          margin-top: 4px;
-        }
-        .headerDisplay {
-          position: relative;
-          left: 15px;
-        }
-      }
       .accordionContent {
         img {
           position: relative;
@@ -570,7 +560,7 @@ header {
           font-size: 10px;
         }
         .headerDisplay {
-          margin-right: -40px;
+          margin-right: -30px;
         }
       }
       .accordionContent {

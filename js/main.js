@@ -2,8 +2,9 @@
 //Begins when the page has finished loading, makes sure json data can be loaded
 $(document).ready(function() {
     var sortByOption = "APR";
-    var accHeaderDisplay = "";
+
     var data = [];
+    var counter = 0;
 
     //Function to sort the json data by lowest to highest chosen data display value
     function sortCardData(a, b) {
@@ -22,29 +23,32 @@ $(document).ready(function() {
     function getCardData(callback) {
         $.getJSON('cards.json', function(cardData) {
             data = $(cardData).sort(sortCardData);
-            callback( data );
+            callback(data);
         });
     }
 
-    function getFilterHeader(creditCard) {
+    function getFilterHeader(creditCard, accHeaderDisplay) {
+        var displayOption = "";
         switch (sortByOption) {
             case "Cashback":
-                return accHeaderDisplay = `<span class="headerDisplay">£${creditCard.cashback} Cashback</span></b></h3>`;
+                displayOption = `£${creditCard.cashback} Cashback`;
                 break;
             case "AnnualFee":
-                return accHeaderDisplay = `</span><span class="headerDisplay">£${creditCard.annualFee} Annual Fee</span></b></h3>`;
+                displayOption = `£${creditCard.annualFee} Annual Fee`;
                 break;
             default:
-                return accHeaderDisplay = `</span><span class="headerDisplay">${creditCard.apr}% APR</span></b></h3>`;
+                displayOption = `${creditCard.apr}% APR`;
         }
+        return accHeaderDisplay = `<span class="headerDisplay">${displayOption}</span></b></h3>`;
     }
 
     function displayCards(cardData) {
         var index = 1; //Iterates to give unique ID's to certain elements
         $.each(cardData, function(i, creditCard) {
+            var accHeaderDisplay = "";
             var accHeader = `<h3 id="header${index}"><b><span class="creditCardName">${creditCard.name}</span>`;
             //Insert credit card name and apr into accordion header
-            accHeaderDisplay = getFilterHeader(creditCard);
+            accHeaderDisplay = getFilterHeader(creditCard, accHeaderDisplay);
             $('#accordion').append(accHeader + accHeaderDisplay);
             //Inserts credit card image, information into accordion body
             $('#header' + index).after(`
@@ -70,26 +74,21 @@ $(document).ready(function() {
         //Defines accordion custom header icons for default and active state (images from css source)
         $("#accordion").accordion("option", "icons", {
             'header': 'defaultIcon',
-            'activeHeader': 'selectedIcon'
+            'activeHeader': 'selectedIcon',
         });
     }
 
     getCardData(displayCards);
 
+
     //SortBy drop down functionality
     $('.sortBySelect').on('change', function() {
-        // $('#accordion').empty();
+        $('#accordion').accordion("destroy");  //Necessary to 'destroy' accordion before emptying it
+        $('#accordion').empty();
         sortByOption = this.value;
         data = $(data).sort(sortCardData);
         displayCards(data);
     });
-
-
-
-
-
-
-
 
     // Side tab functionality
     var isOpen = false;
