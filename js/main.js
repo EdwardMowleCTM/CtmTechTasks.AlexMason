@@ -60,10 +60,14 @@ $(document).ready(function() {
                         <p class="cashbackValue">£${creditCard.cashback}</p>
                     </div>
                     <div class="moreInfoContainer">
-                        <label class="aprAccBody">APR</label>
-                        <p class="aprAccBodyValue">${creditCard.apr}%</p>
-                        <label class="annFee">Annual Fee</label>
-                        <p class="annFeeValue">£${creditCard.annualFee}</p>
+                        <div class="moreInfoWrapper">
+                            <label class="aprAccBody">APR</label>
+                            <p class="aprAccBodyValue">${creditCard.apr}%</p>
+                        </div>
+                        <div class="moreInfoWrapper">
+                            <label class="annFee">Annual Fee</label>
+                            <p class="annFeeValue">£${creditCard.annualFee}</p>
+                        </div>
                     </div>
                 </div>
             `);
@@ -82,7 +86,7 @@ $(document).ready(function() {
 
 
     //SortBy drop down functionality
-    $('.sortBySelect').on('change', function() {
+    $('#sortBySelect').on('change', function() {
         $('#accordion').accordion("destroy");  //Necessary to 'destroy' accordion before emptying it
         $('#accordion').empty();
         sortByOption = this.value;
@@ -103,11 +107,9 @@ $(document).ready(function() {
     function slideLargeMenu() {
         if (isOpen) {
             $('.container').animate({left: "-=300px"}, 300);
-            $('#menu-div').animate({left: "-=0px"}, 300);
             isOpen = false;
         } else {
             $('.container').animate({left: "+=300px"}, 300);
-            $('#menu-div').animate({left: "+=0px"}, 300);
             isOpen = true;
         }
     }
@@ -115,21 +117,19 @@ $(document).ready(function() {
     function slideSmallMenu() {
         if (isOpen) {
             $('.container').animate({left: "-=200px"}, 300);
-            $('#menu-div').animate({left: "-=0px"}, 300);
             isOpen = false;
         } else {
             $('.container').animate({left: "+=200px"}, 300);
-            $('#menu-div').animate({left: "+=0px"}, 300);
             isOpen = true;
         }
     }
 
-    $('#menu-button').click(function() {
+    $('#menuButton').click(function() {
         setNavHeight;
         isSmallScreen() ? slideSmallMenu() : slideLargeMenu();
     });
 
     $(window).on('resize', function() {
-        isOpen ? isSmallScreen() ? slideSmallMenuClose() : slideLargeMenuClose() : null;
+        isOpen ? isSmallScreen() ? slideSmallMenu() : slideLargeMenu() : null;
     });
 });
