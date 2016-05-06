@@ -4,107 +4,105 @@ body {
 
 .container {
   position: relative;
-  top: 50px;
+  top: 30px;
   width: 100%;
-  max-width: 1007px;
+  max-width: 1000px;
   margin: 0 auto; }
 
 /*Header styles*/
 header {
   width: 100%;
-  /*Menu at small screen*/
-  /*Normal nav styles*/ }
+  /*Menu at small screen*/ }
   header #menuButton {
     position: absolute;
     left: -25px;
-    height: 35px;
-    width: 35px;
-    padding: 2px 2px 2px 24px;
+    height: 25px;
+    width: 25px;
+    padding: 2px;
+    padding-left: 24px;
     border-radius: 5px;
     background-color: #000074;
-    cursor: pointer;
-    visibility: hidden; }
+    cursor: pointer; }
     header #menuButton:hover {
       -ms-transform: scale(1.05, 1.05);
       -webkit-transform: scale(1.05, 1.05);
       transform: scale(1.05, 1.05); }
+  header #ctmLogo {
+    width: 300px;
+    margin-left: 60px; }
   header nav {
-    width: 100%;
+    position: absolute;
+    top: -40px;
+    left: -210px;
+    background: linear-gradient(#000099, #000033);
+    font-family: "Arial", Helvetica, sans-serif;
+    width: 200px;
     color: #fff; }
-    header nav #homeTab,
-    header nav .navButton {
-      display: inline-flex;
-      cursor: pointer; }
     header nav #homeTab {
       position: relative;
-      top: 8px;
-      padding: 0.7% 1.4% 0.9%;
-      border: 0;
-      background-color: #000;
-      border-radius: 20%; }
+      top: 50px;
+      margin-left: 70px; }
       header nav #homeTab img {
-        padding-top: 34%; }
+        width: 35px;
+        margin-bottom: 50px; }
     header nav .navButton {
-      padding: 1.5% 3.84% 1.5% 2%;
-      border: 0;
-      border-radius: 10px;
-      margin-right: 0.5%;
-      font-family: "Arial", Helvetica, sans-serif;
-      font-size: 100%;
-      background: linear-gradient(#000099, #000033); }
+      display: block;
+      margin-top: 10px;
+      margin-left: 10px; }
+      header nav .navButton b {
+        position: relative;
+        top: -10px;
+        padding-left: 20px; }
       header nav .navButton img {
-        padding-bottom: 2%; }
+        width: 40px;
+        display: inline; }
 
 .main-body {
+  font-family: "Arial", Helvetica, sans-serif;
   /*Accordion styles*/ }
   .main-body #sortBySelect {
-    position: absolute;
-    top: 18%;
     width: 110px;
+    z-index: 100;
+    margin-top: 30px;
     border-radius: 5px;
     font-size: 16px;
     font-style: italic; }
   .main-body #sortByLabel {
     position: absolute;
-    top: 15%;
-    font-family: "Arial", Helvetica, sans-serif;
-    color: #fff; }
+    margin-top: 10px;
+    color: #fff;
+    z-index: 100; }
   .main-body #accordion {
     /*Accordion div position*/
     width: 100%;
-    margin-top: -80%;
+    margin-top: 30px;
     /*Accordion body controls*/ }
     .main-body #accordion h3 {
       width: 100%;
       z-index: 3;
-      padding: 3% 0;
+      padding: 3% 0 3% 0;
       border: 0;
       border-radius: 10px;
-      margin-top: 2%;
+      margin-top: 10px;
       font-family: "Arial", Helvetica, sans-serif;
-      font-size: 140%;
+      font-size: 0.75em;
       color: #fff;
       background: linear-gradient(#000099, #000033);
       /*Icon when accordion body in default position*/
       /*Icon when accordion body in activated position*/ }
-      .main-body #accordion h3 .creditCardName,
-      .main-body #accordion h3 .headerDisplay {
-        display: inline;
-        width: 20%; }
       .main-body #accordion h3 .creditCardName {
-        width: 100%;
-        margin-left: 40px; }
+        margin-left: 30px; }
       .main-body #accordion h3 .headerDisplay {
-        width: 21.1%;
-        padding: 0;
-        margin: 0 10px 0 0;
+        width: 120px;
+        margin-right: 5px;
+        text-align: right;
         float: right; }
       .main-body #accordion h3 .defaultIcon {
-        background-image: url("/img/green-arrow-right.png") !important;
+        background-image: url(/img/green-arrow-right.png) !important;
         width: 25px;
         height: 25px; }
       .main-body #accordion h3 .selectedIcon {
-        background-image: url("/img/green-arrow-down.png") !important;
+        background-image: url(/img/green-arrow-down.png) !important;
         width: 25px;
         height: 25px; }
     .main-body #accordion .accordionContent {
@@ -117,264 +115,206 @@ header {
       padding: 0;
       border-radius: 0 0 10px 10px;
       overflow: hidden; }
-      .main-body #accordion .accordionContent .cashbackContainer,
+      .main-body #accordion .accordionContent img,
       .main-body #accordion .accordionContent .information,
-      .main-body #accordion .accordionContent img {
+      .main-body #accordion .accordionContent .cashbackContainer {
         display: inline-block; }
       .main-body #accordion .accordionContent img {
-        margin: 30px 10px 0 30px; }
+        width: 140px;
+        height: 90px;
+        padding-right: 70px;
+        border-right: 1px solid black;
+        margin: 10px 10px 0 10px; }
       .main-body #accordion .accordionContent .information {
         position: absolute;
-        top: 30px;
-        width: 45%;
-        height: 100px;
-        padding: 0 10px;
+        top: 100px;
+        left: 0;
+        width: 180px;
+        height: 90px;
+        padding: 0;
+        padding-left: 10px;
+        padding-right: 30px;
         border-right: 1px solid grey;
         margin: 0;
-        font-size: 0.8em; }
+        font-size: 0.55em; }
       .main-body #accordion .accordionContent .cashbackContainer {
         position: absolute;
-        top: 40px;
-        right: 40px;
-        width: 20%;
+        top: 10px;
+        right: 10%;
+        width: 90px;
         font-family: "Arial", Helvetica, sans-serif; }
         .main-body #accordion .accordionContent .cashbackContainer label {
-          font-size: 1.5em; }
+          font-size: 1em; }
         .main-body #accordion .accordionContent .cashbackContainer p {
           margin: 0;
-          font-size: 1.8em; }
+          font-size: 1.2em; }
       .main-body #accordion .accordionContent .moreInfoContainer {
         position: absolute;
-        top: 120px;
-        left: 190px;
-        width: 400px;
-        height: 35%;
+        top: 80px;
+        right: 11%;
         font-family: "Arial", Helvetica, sans-serif; }
         .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper {
-          display: inline-block;
-          margin-right: 70px; }
-        .main-body #accordion .accordionContent .moreInfoContainer label {
-          font-size: 1.1em; }
-        .main-body #accordion .accordionContent .moreInfoContainer p {
-          margin-top: 5px;
-          font-size: 1.3em; }
+          position: relative; }
+          .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper:nth-child(2) {
+            margin-top: -10px; }
+          .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper:nth-child(2) label {
+            font-size: 0.9em; }
+          .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper p {
+            margin-top: 0;
+            font-size: 1.1em; }
 
 /*Responsive Media Styles*/
-@media (max-width: 1050px) {
-  .container {
-    top: 10px; }
-    .container header .ctmLogo {
-      margin-left: 70px; }
-    .container header #menuButton {
-      visibility: visible; }
-    .container header nav {
-      position: absolute;
-      top: -18px;
-      left: -320px;
-      background: linear-gradient(#000099, #000033);
-      width: 300px; }
-      .container header nav #homeTab,
-      .container header nav .navButton {
-        position: relative;
-        top: -10%;
-        display: block;
-        margin-top: 30px;
-        margin-left: 10px;
-        background: none; }
-        .container header nav #homeTab b,
-        .container header nav .navButton b {
-          position: relative;
-          top: -15px;
-          padding-left: 40px; }
-        .container header nav #homeTab img,
-        .container header nav .navButton img {
-          width: 17%;
-          display: inline; }
-        .container header nav #homeTab img[alt="Home Image"],
-        .container header nav .navButton img[alt="Home Image"] {
-          position: relative;
-          left: 38%; }
-    .container .main-body #sortBySelect {
-      position: absolute;
-      top: 12%;
-      font-size: 0.9em; }
-    .container .main-body #sortByLabel {
-      position: absolute;
-      top: 9%; }
-    .container .main-body #accordion {
-      margin-top: 7.5%; }
-      .container .main-body #accordion h3 {
-        font-size: 1.25em; } }
+@media (min-width: 28em) {
+  .main-body #accordion .accordionContent .cashbackContainer,
+  .main-body #accordion .accordionContent .moreInfoContainer {
+    right: 20%; } }
 
-@media (max-width: 930px) {
-  .main-body #sortByLabel,
-  .main-body #sortBySelect {
-    margin-left: 8%; }
-  .main-body #accordion {
-    width: 84%;
-    margin: 50px auto 0; }
-    .main-body #accordion h3 {
-      margin-top: 20px; }
-      .main-body #accordion h3 .creditCardName {
-        font-size: 0.85em; }
-      .main-body #accordion h3 .headerDisplay {
-        width: 170px;
-        font-size: 0.85em; }
-    .main-body #accordion .accordionContent img {
-      margin: 15px; }
-    .main-body #accordion .accordionContent .information {
-      top: 15px;
-      font-size: 0.7em; }
-    .main-body #accordion .accordionContent .cashbackContainer {
-      right: 20px; }
-      .main-body #accordion .accordionContent .cashbackContainer .cashback {
-        font-size: 1.3em; }
-      .main-body #accordion .accordionContent .cashbackContainer .cashbackValue {
-        font-size: 1.5em; }
-    .main-body #accordion .accordionContent .moreInfoContainer {
-      top: 100px;
-      left: 180px;
-      width: 340px; }
-      .main-body #accordion .accordionContent .moreInfoContainer label {
-        font-size: 1em; }
-      .main-body #accordion .accordionContent .moreInfoContainer p {
-        font-size: 1.2em; } }
-
-@media (max-width: 820px) {
-  .main-body #accordion .accordionContent {
-    height: 170px; }
-    .main-body #accordion .accordionContent img {
-      width: 120px;
-      height: 90px; }
-    .main-body #accordion .accordionContent .cashbackContainer label {
-      font-size: 1.1em; }
-    .main-body #accordion .accordionContent .cashbackContainer p {
-      font-size: 1.3em; }
-    .main-body #accordion .accordionContent .moreInfoContainer {
-      top: 110px;
-      left: 160px; } }
-
-@media (max-width: 760px) {
-  .container header #menuButton {
-    height: 28px;
-    width: 28px;
-    padding: 2px 2px 2px 24px; }
-  .container header nav {
+@media (min-width: 34em) {
+  header #ctmLogo {
+    width: 400px;
+    height: 50px; }
+  header #menuButton {
+    width: 35px;
+    height: 35px; }
+  header nav {
     position: absolute;
-    top: -18px;
-    left: -220px;
-    background: linear-gradient(#000099, #000033);
-    width: 200px; }
-    .container header nav #homeTab {
-      margin-top: 50px; }
-    .container header nav .navButton {
-      display: block;
-      margin-top: 5px;
-      margin-left: 10px;
-      background: none; }
-      .container header nav .navButton b {
-        position: relative;
-        top: -10px;
-        padding-left: 20px; }
-      .container header nav .navButton img {
-        width: 20%;
-        display: inline; }
-      .container header nav .navButton img[alt="Home Image"] {
-        top: 20px;
-        left: 34%; }
-  .container .main-body #accordion h3 {
-    font-size: 1em; }
-    .container .main-body #accordion h3 .headerDisplay {
-      width: 140px; }
-  .container .main-body #accordion .accordionContent .information {
-    font-size: 0.6em; }
-  .container .main-body #accordion .accordionContent .cashbackContainer {
-    right: -10px; }
-    .container .main-body #accordion .accordionContent .cashbackContainer label {
-      font-size: 0.9em; }
-    .container .main-body #accordion .accordionContent .cashbackContainer p {
-      font-size: 1.1em; }
-  .container .main-body #accordion .accordionContent .moreInfoContainer {
-    font-size: 0.9em;
-    top: 100px; } }
-
-@media (max-width: 600px) {
-  .main-body #accordion h3 .creditCardName {
-    margin-left: 28px; }
-  .main-body #accordion .accordionContent img {
-    width: 100px;
-    height: 80px; }
-  .main-body #accordion .accordionContent .information {
-    font-size: 10%; }
-  .main-body #accordion .accordionContent .moreInfoContainer {
-    left: 140px;
-    margin-top: 15px; }
-    .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper {
-      font-size: 0.9em; } }
-
-@media (max-width: 540px) {
-  .ctmLogo {
+    left: -320px;
     width: 300px; }
-  .main-body {
-    margin-top: 60px; }
-    .main-body #sortBySelect {
-      margin-top: 10px; }
-    .main-body #accordion h3 .creditCardName,
-    .main-body #accordion h3 .headerDisplay {
-      font-size: 0.68em; }
-    .main-body #accordion h3 .headerDisplay {
-      position: relative;
-      left: 15px;
-      margin-right: -15px;
-      margin-top: 4px; }
-    .main-body #accordion .accordionContent .information {
-      font-size: 0.5em !important; }
-    .main-body #accordion .accordionContent .cashbackContainer {
-      margin-right: -10px;
-      font-size: 0.85em; }
-    .main-body #accordion .accordionContent .moreInfoContainer {
-      margin-top: -10px; }
-      .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper {
-        font-size: 0.8em; } }
-
-@media (max-width: 490px) {
-  .main-body #sortByLabel,
-  .main-body #sortBySelect {
-    font-size: 16px; }
-  .main-body #accordion .accordionContent img {
-    margin-top: 5px;
-    height: 80px;
-    width: 130px;
-    padding-top: 5px;
-    padding-right: 13.5%;
-    border-right: 1px solid #000; }
-  .main-body #accordion .accordionContent .information {
-    top: 90px;
-    left: 0;
-    height: 115px;
-    width: 170px;
-    padding-right: 19px; }
-  .main-body #accordion .accordionContent .cashbackContainer {
-    top: 15px;
-    left: 65%;
+    header nav #homeTab {
+      margin-left: 120px; }
+      header nav #homeTab img {
+        width: 50px; }
+    header nav .navButton {
+      margin-top: 30px; }
+      header nav .navButton b {
+        top: -6px;
+        font-size: 1.2em;
+        margin-left: 20px;
+        letter-spacing: 1px; }
+      header nav .navButton img {
+        margin-left: 20px; }
+  .main-body #accordion h3 {
     font-size: 1em; }
-  .main-body #accordion .accordionContent .moreInfoContainer {
-    left: 65%;
-    margin-top: -25px; }
-    .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper {
-      font-size: 0.9em;
-      display: block; } }
-
-@media (max-width: 430px) {
-  .main-body #accordion h3 .creditCardName,
-  .main-body #accordion h3 .headerDisplay {
-    font-size: 0.6em; }
-  .main-body #accordion h3 .headerDisplay {
-    margin-right: -30px; }
+    .main-body #accordion h3 .headerDisplay {
+      width: 160px;
+      margin-right: 10px; }
   .main-body #accordion .accordionContent img {
-    width: 120px;
-    padding-right: 64px; }
+    width: 150px;
+    height: 110px;
+    border: 0;
+    padding: 0; }
+  .main-body #accordion .accordionContent .information {
+    position: absolute;
+    top: 10px;
+    left: 175px;
+    padding-right: 20px;
+    font-size: 0.65em;
+    width: 38%; }
   .main-body #accordion .accordionContent .cashbackContainer {
-    left: 68%; }
+    top: 30px;
+    right: 4%; }
+    .main-body #accordion .accordionContent .cashbackContainer label {
+      font-size: 1.2em; }
   .main-body #accordion .accordionContent .moreInfoContainer {
-    left: 68%; } }
+    top: 120px;
+    left: 175px;
+    width: 50%;
+    padding-left: 10px; }
+    .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper {
+      margin-right: 50px;
+      display: inline-block; } }
+
+@media (min-width: 41em) {
+  .main-body #accordion .accordionContent .information {
+    font-size: 0.7em; }
+  .main-body #accordion .accordionContent .cashbackContainer {
+    right: 13%; }
+  .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper {
+    font-size: 1.2em; } }
+
+@media (min-width: 48em) {
+  .main-body #accordion h3 {
+    font-size: 1.3em; }
+    .main-body #accordion h3 .creditCardName {
+      margin-left: 40px; }
+    .main-body #accordion h3 .headerDisplay {
+      width: 200px; }
+  .main-body #accordion .accordionContent img {
+    width: 170px;
+    height: 120px;
+    margin: 20px 0 0 30px; }
+  .main-body #accordion .accordionContent .information {
+    top: 20px;
+    left: 220px;
+    width: 45%;
+    font-size: 0.8em; }
+  .main-body #accordion .accordionContent .cashbackContainer {
+    right: 5%; }
+  .main-body #accordion .accordionContent .moreInfoContainer {
+    left: 220px; }
+    .main-body #accordion .accordionContent .moreInfoContainer .moreInfoWrapper {
+      margin-right: 100px; } }
+
+@media (min-width: 57em) {
+  .main-body #accordion .accordionContent .cashbackContainer {
+    right: 12%; }
+    .main-body #accordion .accordionContent .cashbackContainer label {
+      font-size: 1.4em; }
+    .main-body #accordion .accordionContent .cashbackContainer p {
+      font-size: 1.8em; } }
+
+@media (min-width: 64em) {
+  header #ctmLogo {
+    margin: 0; }
+  header #menuButton {
+    visibility: hidden; }
+  header nav {
+    margin-top: 40px;
+    left: 0;
+    width: 100%;
+    background: none;
+    z-index: 1;
+    font-size: 0.9em; }
+    header nav a {
+      display: inline-block !important;
+      cursor: pointer;
+      background-color: #000; }
+    header nav #homeTab {
+      padding: 14px 1.3% .3% 1.3%;
+      border: 0;
+      margin: 0;
+      background-color: #000;
+      border-radius: 20%; }
+      header nav #homeTab img {
+        width: 30px;
+        margin-bottom: 0; }
+    header nav .navButton {
+      position: relative;
+      top: 40px;
+      padding: 14px 12.7px 10px 0;
+      border: 0;
+      border-radius: 10px;
+      margin: 0;
+      margin-right: 0.5%;
+      margin-left: 2px;
+      font-family: "Arial", Helvetica, sans-serif;
+      font-size: 100%;
+      background: linear-gradient(#000099, #000033); }
+      header nav .navButton img {
+        width: 35px;
+        height: 25px;
+        margin-left: 15px; }
+      header nav .navButton b {
+        position: relative;
+        top: -7px;
+        margin-left: -10px; }
+  .main-body #sortByLabel {
+    top: 125px; }
+  .main-body #sortBySelect {
+    position: absolute;
+    top: 130px; }
+    .main-body #sortBySelect:hover {
+      cursor: pointer; }
+  .main-body #accordion {
+    position: absolute;
+    top: 160px; } }

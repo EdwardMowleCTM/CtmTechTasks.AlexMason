@@ -56,8 +56,8 @@ $(document).ready(function() {
                     <img src="/img/${creditCard.code.toLowerCase()}.png">
                     <p class="information">${creditCard.information}</p>
                     <div class="cashbackContainer">
-                        <label class="cashback">Cashback</label>
-                        <p class="cashbackValue">£${creditCard.cashback}</p>
+                        <label>Cashback</label>
+                        <p>£${creditCard.cashback}</p>
                     </div>
                     <div class="moreInfoContainer">
                         <div class="moreInfoWrapper">
@@ -97,14 +97,14 @@ $(document).ready(function() {
     // Side tab functionality
     var isOpen = false;
     var setNavHeight = $('nav').css({height: window.innerHeight});
-    $('#menu-div').hide();
     setNavHeight;
 
     function isSmallScreen() {
-        return (window.innerWidth < 720);
+        return (window.innerWidth < 544);
     }
 
     function slideLargeMenu() {
+        alert("slideLargeMenu");
         if (isOpen) {
             $('.container').animate({left: "-=300px"}, 300);
             isOpen = false;
@@ -115,6 +115,7 @@ $(document).ready(function() {
     }
 
     function slideSmallMenu() {
+        alert("slideSmallMenu");
         if (isOpen) {
             $('.container').animate({left: "-=200px"}, 300);
             isOpen = false;

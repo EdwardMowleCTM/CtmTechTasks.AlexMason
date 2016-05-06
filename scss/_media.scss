@@ -1,0 +1,244 @@
+/*Responsive Media Styles*/
+
+@media (min-width: 28em) {
+  .main-body {
+    #accordion {
+      .accordionContent {
+        .cashbackContainer,
+        .moreInfoContainer{
+          right: 20%;
+        } //.cashbackContainer,.moreInfoContainer
+      } //.accordionContent
+    } //#accordion
+  } //.main-body
+} //@media: min-width 28em
+
+@media (min-width: 34em) {
+  header {
+    #ctmLogo {
+      width: 400px;
+      height: 50px;
+    } //#ctmLogo
+    #menuButton {
+      width: 35px;
+      height: 35px;
+    } //#menuButton
+    nav {
+      position: absolute;
+      left: -320px;
+      width: 300px;
+      #homeTab {
+        margin-left: 120px;
+        img {
+          width: 50px;
+        } //#img
+      } //#homeTab
+      .navButton {
+        margin-top: 30px;
+        b {
+          top: -6px;
+          font-size: 1.2em;
+          margin-left: 20px;
+          letter-spacing: 1px;
+        } //b
+        img {
+          margin-left: 20px;
+        } //img
+      } //.navButton#
+    } //nav
+  } //header
+  .main-body {
+    #accordion {
+      h3 {
+        font-size: 1em;
+        .headerDisplay {
+          width: 160px;
+          margin-right: 10px;
+        } //.headerDisplay
+      } //h3
+      .accordionContent {
+        img {
+          width: 150px;
+          height: 110px;
+          border: 0;
+          padding: 0;
+        } //img
+        .information {
+          position: absolute;
+          top: 10px;
+          left: 175px;
+          padding-right: 20px;
+          font-size: 0.65em;
+          width: 38%;
+        } //.information
+        .cashbackContainer {
+          top: 30px;
+          right: 4%;;
+          label {
+            font-size: 1.2em;
+          } //label
+        } //.cashbackContainer
+        .moreInfoContainer {
+          top: 120px;
+          left: 175px;
+          width: 50%;
+          padding-left: 10px;
+          .moreInfoWrapper {
+            margin-right: 50px;
+            display: inline-block;
+          } //.moreInfoWrapper
+        } //.moreInfoContainer
+      } //.accordionContent
+    } //#accordion
+  } //main-body
+} //@media: min-width 34em
+
+@media (min-width: 41em) {
+  .main-body {
+    #accordion {
+      .accordionContent {
+        .information {
+          font-size: 0.7em;
+        } //.information
+        .cashbackContainer {
+          right: 13%;
+        } //.cashbackContainer
+        .moreInfoContainer {
+          .moreInfoWrapper {
+            font-size: 1.2em;
+          } //.moreInfoContainer
+        } //.moreInfoWrapper
+      } //.accordionContent
+    } //#accordion
+  } //main-body
+} //@media: min-width 41em
+
+@media (min-width: 48em) {
+  .main-body {
+    #accordion {
+      h3 {
+        font-size: 1.3em;
+        .creditCardName {
+          margin-left: 40px;
+        } //.creditCardName
+        .headerDisplay {
+          width: 200px;
+        } //.headerDisplay
+      } //h3
+      .accordionContent {
+        img {
+          width: 170px;
+          height: 120px;
+          margin: 20px 0 0 30px;
+        } //img
+        .information {
+          top: 20px;
+          left: 220px;
+          width: 45%;
+          font-size: 0.8em;
+        } //.information
+        .cashbackContainer {
+          right: 5%;
+        } //.cashbackContainer
+        .moreInfoContainer {
+          left: 220px;
+          .moreInfoWrapper {
+            margin-right: 100px;
+          } //.moreInfoWrapper
+        } //.moreInfoContainer
+      } //.accordionContent
+    } //#accordion
+  } //.main-body
+} //@media: min-width 48em
+
+@media (min-width: 57em) {
+  .main-body {
+    #accordion {
+      .accordionContent {
+        .cashbackContainer {
+          right: 12%;
+          label {
+            font-size: 1.4em;
+          } //label
+          p {
+            font-size: 1.8em;
+          } //p
+        } //.cashbackContainer
+      } //.accordionContent
+    } //#accordion
+  } //.main-body
+} //@media: min-width 57em
+
+@media (min-width: 64em) {
+  header {
+    #ctmLogo {
+      margin: 0;
+    } //#ctmLogo
+    #menuButton {
+      visibility: hidden;
+    } //#menuButton
+    nav {
+      margin-top: 40px;
+      left: 0;
+      width: 100%;
+      background: none;
+      z-index: 1;
+      font-size: 0.9em;
+      a {
+        display: inline-block !important;
+        cursor: pointer;
+        background-color: #000;
+      } //a
+      #homeTab {
+        padding: 14px 1.3% .3% 1.3%;
+        border: 0;
+        margin: 0;
+        background-color: #000;
+        border-radius: 20%;
+        img {
+          width: 30px;
+          margin-bottom: 0;
+        } //img
+      } //#homeTab
+      .navButton {
+        position: relative;
+        top: 40px;
+        padding: 14px 12.7px 10px 0;
+        border: 0;
+        border-radius: 10px;
+        margin: 0;
+        margin-right: 0.5%;
+        margin-left: 2px;
+        font-family: $defualt-font-family;
+        font-size: 100%;
+        background: $colour-gradient;
+        img {
+          width: 35px;
+          height: 25px;
+          margin-left: 15px;
+        } //img
+        b {
+          position: relative;
+          top: -7px;
+          margin-left: -10px;
+        } //b
+      } //.navButton
+    } //nav
+  } //header
+  .main-body {
+    #sortByLabel {
+      top: 125px;
+    } //#sortByLabel
+    #sortBySelect {
+      position: absolute;
+      top: 130px;
+      &:hover {
+        cursor: pointer;
+      } //&:hover
+    } //sortBySelect
+    #accordion {
+      position: absolute;
+      top: 160px;
+    } //#accordion
+  } //.main-body
+} //@media: min-width 64em
