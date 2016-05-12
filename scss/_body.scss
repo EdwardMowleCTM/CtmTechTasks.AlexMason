@@ -1,7 +1,7 @@
 
 body {
   background-color: #0047b3;
-  overflow: hidden;
+  overflow-x: hidden;
 } //body
 
 .container {
@@ -42,6 +42,13 @@ header {
      background: $colour-gradient;
      font-family: $defualt-font-family;
      width: 200px;
+     div {
+       cursor: pointer;
+     }
+     //Menu items on hover
+     .subMenu {
+       display: none;
+     }
      color: #fff;
      #homeTab {
       position: relative;
@@ -49,27 +56,77 @@ header {
       margin-left: 70px;
       img {
         width: 35px;
-        margin-bottom: 50px;
+        margin-bottom: 0px;
       } //img
     } //#homeTab
      .navButton {
        display: block;
-       margin-top: 10px;
-       margin-left: 10px;
+       position: relative;
+       top: 50px;
+       padding-top: 10px;
+       padding-left: 10px;
+       overflow-y: auto;
+       &:hover {
+         background-color: $menu-background;
+         color: #000;
+       }
+       &:last-child {
+         b {
+           top: -15px;
+           margin-left: 10px;
+
+         } //b
+         img {
+           width: 30px;
+         } //img
+       } //&:last-child
        b {
          position: relative;
          top: -10px;
          padding-left: 20px;
-       } //b
+         z-index: 300;
+       } // b
        img {
          width: 40px;
          display: inline;
        } //img
+       ul {
+         padding: 0;
+         margin: 0;
+         li {
+           padding-bottom: 5px;
+           margin-right: 10px;
+           margin-top: 5px;
+           border-bottom: 1px solid #000;
+           color: #000;
+           list-style-type: none;
+           a {
+             text-decoration: none;
+             padding: 5px;
+             border-radius: 5px;
+             color: #000;
+             line-height: 30px;
+             &:hover {
+               background-color: #189507;
+             } //&:hover
+           } //a
+           &:last-child {
+             border: none;
+           } //&:hover
+         } //li
+       } //ul
     } //.navButton
   } //nav
 } //header
 .main-body {
+  width: 100%;
   font-family: $defualt-font-family;
+  h1 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 300;
+  }
   #sortBySelect {
     width: 110px;
     z-index: 100;
@@ -77,6 +134,9 @@ header {
     border-radius: 5px;
     font-size: 16px;
     font-style: italic;
+    &:hover {
+      cursor: pointer;
+    } //&:hover
   } //.sortBySelect
   #sortByLabel {
     position: absolute;

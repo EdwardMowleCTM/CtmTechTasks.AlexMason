@@ -21,16 +21,94 @@
         <img id="ctmLogo"  src="img/ctm-logo.svg" alt="CTM Logo">
         <!-- Navigation buttons -->
         <nav>
-          <a id="homeTab"><img src="/img/icons/home.png" alt="Home Image"></a>
-          <a class="navButton"><img src="/img/icons/vehicle.png" alt="Vehicles Image"><b>Vehicles</b></a>
-          <a class="navButton"><img src="/img/icons/homeandpet.png" alt="Home and Pet Image"><b>Home & pet</b></a>
-          <a class="navButton"><img src="/img/icons/finance.png" alt="Finances Image"><b>Finances</b></a>
-          <a class="navButton"><img src="/img/icons/life.png" alt="Life Insurance Image"><b>Life</b></a>
-          <a class="navButton"><img src="/img/icons/business.png" alt="Business Image"><b>Business</b></a>
-          <a class="navButton"><img src="/img/icons/travel.png" alt="Travel Image"><b>Travel</b></a>
+          <div id="homeTab"><img src="/img/icons/home.png" alt="Home Image"></div>
+          <div class="navButton">
+            <img src="/img/icons/vehicle.png" alt="Vehicles Image">
+            <b>Vehicles</b>
+            <ul class="subMenu" id="Vehicles">
+              <li><a href="#">Car Insurance</a>
+              <li><a href="#">Van Insurance</a>
+              <li><a href="#">Motorbike Insurance</a>
+              <li><a href="#">Breakdown Cover</a>
+            </ul>
+          </div>
+          <div class="navButton">
+            <img src="/img/icons/homeandpet.png" alt="Home and Pet Image">
+            <b>Home & pet</b>
+            <ul class="subMenu" id="Home & pet">
+              <li><a href="#">Home Insurance</a>
+              <li><a href="#">Buildings Insurance</a>
+              <li><a href="#">Pet Insurance</a>
+              <li><a href="#">Energy</a>
+              <li><a href="#">Electricity</a>
+              <li><a href="#">Broadband</a>
+              <li><a href="#">Digital TV</a>
+              <li><a href="#">Mobile phones</a>
+            </ul>
+          </div>
+          <div class="navButton">
+            <img src="/img/icons/finance.png" alt="Finances Image">
+            <b>Finances</b>
+            <ul class="subMenu" id="Finances">
+              <li><a href="#">Credit Cards</a>
+              <li><a href="#">Loans</a>
+              <li><a href="#">MCurrent accounts</a>
+                <li><a href="#">Savings accounts</a>
+                <li><a href="#">Cash ISAs</a>
+            </ul>
+          </div>
+          <div class="navButton">
+            <img src="/img/icons/life.png" alt="Life Insurance Image">
+            <b>Life</b>
+            <ul class="subMenu" id="Life">
+              <li><a href="#">Life Insurance</a>
+              <li><a href="#">Health Insurance</a>
+              <li><a href="#">Accident, sickness and unemployment insurance</a>
+              <li><a href="#">Over 50s life insurance</a>
+              <li><a href="#">Insurance</a>
+            </ul>
+          </div>
+          <div class="navButton">
+            <img src="/img/icons/business.png" alt="Business Image">
+            <b>Business</b>
+            <ul class="subMenu" id="Business">
+              <li><a href="#">Public liability insurance</a>
+              <li><a href="#">Landlord insurance</a>
+              <li><a href="#">Business insurance</a>
+              <li><a href="#">Van insurance</a>
+              <li><a href="#">Employers liability insurance</a>
+              <li><a href="#">Professional indemnity insurance</a>
+              <li><a href="#">Business energy</a>
+            </ul>
+          </div>
+          <div class="navButton">
+            <img src="/img/icons/travel.png" alt="Travel Image">
+            <b>Travel</b>
+            <ul class="subMenu" id="Travel">
+              <li><a href="#">Travel Insurance</a>
+              <li><a href="#">Single trip Insurance</a>
+              <li><a href="#">Annual travel Insurance</a>
+              <li><a href="#">Winter sports travel insurance</a>
+            </ul>
+          </div>
+          <div class="navButton">
+            <img src="/img/icons/home.png" alt="More Links">
+            <b>More</b>
+            <ul class="subMenu" id="More">
+              <li><a href="#">Heroic rewards</a>
+              <li><a href="#">The hub</a>
+              <li><a href="#">Car guides</a>
+              <li><a href="#">Home guides</a>
+              <li><a href="#">Travel guides</a>
+              <li><a href="#">Life guides</a>
+              <li><a href="#">Pet guides</a>
+            </ul>
+          </div>
         </nav>
       </header>
       <section class="main-body">
+        <h1>Credit Cards</h1>
+        <hr>
         <!-- Options to sort the JSON data -->
         <label id="sortByLabel">Sort data by:</label>
         <select id="sortBySelect">
